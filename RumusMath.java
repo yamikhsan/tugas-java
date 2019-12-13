@@ -6,8 +6,6 @@ public class RumusMath{
 
     public static void main(String[] args){
 
-        scan = new Scanner(System.in);
-
         menu();
 
     }
@@ -17,6 +15,8 @@ public class RumusMath{
             boolean run = true;
     
             while(run){
+
+                scan = new Scanner(System.in);
 
                 try {
     
@@ -59,13 +59,14 @@ public class RumusMath{
                             break;
                     }
 
-                    exitMenu();
+                    if(run){
+                        exitMenu();
+                    }
         
                     println("------------------------------------------------");
 
                 } catch (Exception e) {
                     println("harus input type data int");
-                    run = false;
                 }
     
             } 
@@ -75,6 +76,7 @@ public class RumusMath{
     private static void luasSegitiga() {
 
         try {
+            println("Luas Segitiga");
             
             print("Alas = ");
             double a = scan.nextDouble();
@@ -94,6 +96,7 @@ public class RumusMath{
     private static void volumeBalok() {
 
         try {
+            println("Volume Balok");
             
             print("Panjang = ");
             double p = scan.nextDouble();
@@ -116,7 +119,8 @@ public class RumusMath{
     private static void volumePrismaSegitiga() {
 
         try {
-            
+            println("Volume Prisma Segitiga");
+
             print("Alas = ");
             double a = scan.nextDouble();
 
@@ -141,6 +145,7 @@ public class RumusMath{
         final double pi = 3.14;
         
         try {
+            println("Volume Kerucut");
             
             print("Jari-jari = ");
             double r = scan.nextDouble();
@@ -158,9 +163,10 @@ public class RumusMath{
     }
 
     private static void exitMenu(){
-        print("Input 1 jika ingin lanjut jika tidak input apa saja = ");
+        print("Input angka 1 jika ingin lanjut jika tidak input angka apa saja = ");
         int res = scan.nextInt();
         if(res != 1){
+            println("------------------------------------------------");
             System.exit(1);
         }
     }
