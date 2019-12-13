@@ -36,22 +36,18 @@ public class RumusMath{
                     switch (i) {
                         case 1:
                             luasSegitiga();
-                            exitMenu();
                             break;
         
                         case 2:
                             volumeBalok();
-                            exitMenu();
                             break;
         
                         case 3:
                             volumePrismaSegitiga();
-                            exitMenu();
                             break;
         
                         case 4:
                             volumeKerucut();
-                            exitMenu();
                             break;
         
                         case 5:
@@ -62,6 +58,8 @@ public class RumusMath{
                             println("Menu tidak ada");
                             break;
                     }
+
+                    exitMenu();
         
                     println("------------------------------------------------");
 
