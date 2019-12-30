@@ -14,7 +14,9 @@ public class Polymorphism{
         Human human = new Human();
         human.printAge(20);
         human.printAge("Twenty");
-        
+
+        human.printName("Banana");
+        human.printName("Blue", "Banana");
     }
 }
 
@@ -57,8 +59,12 @@ class Human{
         System.out.println(age);
     }
 
+    public void printName(String first){
+        System.out.println(first);
+    }
+
+    public void printName(String first, String last){
+        System.out.println(first + " " + last);
+    }
+
 }
-
-
-
-

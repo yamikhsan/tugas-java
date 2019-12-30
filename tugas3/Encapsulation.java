@@ -1,4 +1,7 @@
 public class Encapsulation{
+
+    // private String name;
+
     public static void main(String[] args) {
 
         Person person = new Person();
@@ -6,6 +9,10 @@ public class Encapsulation{
 
         String name = person.getName();
         System.out.print(name);
+
+        // Encapsulation e = new Encapsulation();
+        // e.name = "Banana";
+        // System.out.print(e.name);
         
     }
 }
